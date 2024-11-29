@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar bg-white w-64 p-6 flex flex-col justify-between">
+      <div>
+        <div class="logo text-3xl font-bold text-blue-600 pl-10 mb-10"><img src="./assets/Logo.png" alt=""></div>
+        <hr>
+        <nav class="mt-8">
+          <ul class="space-y-4">
+            <li class="flex items-center space-x-2 p-2 hover:bg-green-100 rounded-lg hover:text-green-700 text-blue-500 font-semibold">
+              <img src="./assets/dashboard-off.png" alt="Dashboard Icon" class="w-5 h-5">
+              <span>Dashboard</span>
+            </li>
+            <li class="flex items-center space-x-2 p-2 hover:bg-green-100 rounded-lg hover:text-green-700">
+              <img src="./assets/invoice-off.png" alt="Invoices Icon" class="w-5 h-5">
+              <span>Invoices</span>
+            </li>
+            <li class="flex items-center space-x-2 p-2 hover:bg-green-100 rounded-lg hover:text-green-700">
+              <img src="./assets/description.png" alt="Proposals Icon" class="w-5 h-5">
+              <span>Proposals</span>
+            </li>
+            <li class="flex items-center space-x-2 p-2 hover:bg-green-100 rounded-lg hover:text-green-700">
+              <img src="./assets/Subtract.png" alt="Services Icon" class="w-5 h-5">
+              <span>Services</span>
+            </li>
+            <li class="flex items-center space-x-2 p-2 hover:bg-green-100 rounded-lg hover:text-green-700">
+              <img src="./assets/receipt_long.png" alt="Transactions Icon" class="w-5 h-5">
+              <span>Transactions</span>
+            </li>
+            <li class="flex items-center space-x-2 p-2 hover:bg-green-100 rounded-lg hover:text-green-700">
+              <img src="./assets/projects-off.png" alt="Projects Icon" class="w-5 h-5">
+              <span>Projects</span>
+            </li>
+            <li class="flex items-center space-x-2 p-2 hover:bg-green-100 rounded-lg hover:text-green-700">
+              <img src="./assets/group.png" alt="Customers Icon" class="w-5 h-5">
+              <span>Customers</span>
+            </li>
+          </ul>
+        </nav>       
+      </div>
+    
+      <div class="settings flex flex-col space-y-4 pt-0">
+        <hr>
+        <button class="text-gray-600 hover:text-blue-500 flex items-center space-x-2">
+          <img class="w-6 h-6" src="./assets/settings-off.png" alt="Settings Icon">
+          <span>Settings</span>
+        </button>
+        <button class="text-gray-600 hover:text-blue-500 flex items-center space-x-2">
+          <img class="w-6 h-6" src="./assets/logout-off.png" alt="F Icon">
+          <span>Log out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col relative">
+      <!-- Header -->
+      <header class="bg-[#121E48] text-white flex justify-between pt-10 pl-2 pr-3 py-6 w-full" style="height: 245px;">
+        <div>
+          <h1 class="text-2xl font-semibold">Hi, Welcome back <span class="text-green-700">Rama!</span></h1>
+        </div>
+        <div class="flex  space-x-6">
+          <!-- Search Input -->
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="px-4 py-2 bg-gray-700 bg-opacity-50 text-white rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+            />
+          </div>
+
+          <!-- Bell Icon with Notification  -->
+          <div class="relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 22c1.104 0 2-.896 2-2h-4c0 1.104.896 2 2 2zm6-6v-5c0-3.279-1.661-6.078-4.938-6.91.015-.03.039-.071.039-.09 0-.514-.186-.998-.514-1.378-.324-.377-.768-.622-1.308-.622-.539 0-.984.245-1.308.622-.328.38-.514.864-.514 1.378 0 .019.024.06.039.09-3.277.832-4.938 3.631-4.938 6.91v5l-2 2h18l-2-2zm-4 0h-4v-5c0-2.688 1.516-4.599 4-4.599 2.484 0 4 1.911 4 4.599v5z"/>
+            </svg>
+            <div class="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full"></div>
+          </div>
+
+          <!-- Profile Image -->
+          <div>
+            <img
+              src="./assets/lebelname.png"
+              alt="Profile"
+              class="w-10 h-10 rounded-full border-2 border-white"
+            />
+          </div>
+        </div>
+      </header>
+      <!-- Dashboard Content -->
+      <main class="flex flex-col space-y-8 -mt-32 relative z-20">
+        <h2 class="pl-5 pr-5  text-xl font-semibold text-white">Finance Overview</h2>
+        <!-- Finance Overview -->
+        <div class="pl-5 grid grid-cols-4 gap-7">
+          <div class="relative bg-white shadow p-4 rounded-lg flex justify-between items-center">
+            <div>
+              <p class="text-sm text-gray-500">Sales</p>
+              <h3 class="text-2xl font-bold">$2,77,120</h3>
+            </div>
+            <img class="absolute bottom-0 right-0 p-3" src="./assets/insights.png" alt="icon" class="w-10 h-10">
+          </div>
+          <div class="relative bg-white shadow p-5 rounded-lg flex justify-between items-center">
+            <div>
+              <p class="text-sm text-gray-500">Expense</p>
+              <h3 class="text-2xl font-bold">$60,100</h3>
+            </div>
+            <img class="absolute bottom-0 right-0 p-3" src="./assets/Expense.png" alt="icon" class="w-10 h-10">
+          </div>
+          <div class="relative bg-white shadow p-4 rounded-lg flex justify-between items-center">
+            <div>
+              <p class="text-sm text-gray-500">Profit</p>
+              <h3 class="text-2xl font-bold">$57,230</h3>
+            </div>
+            <img class="absolute bottom-0 right-0 p-3" src="./assets/Profit.png" alt="icon" class="w-10 h-10">
+          </div>
+          <div class="relative bg-white shadow p-4 rounded-lg flex justify-between items-center">
+            <div>
+              <p class="text-sm text-gray-500">Income</p>
+              <h3 class="text-2xl font-bold">$1,60,124</h3>
+            </div>
+            <img class="absolute bottom-0 right-0 p-3" src="./assets/Income.png" alt="icon" class="w-10 h-10">
+          </div>
+        </div>
+
+        <!-- Current Projects Table -->
+        <div class="bg-white shadow rounded-lg p-5 ml-4 mr-4">
+          <div class="flex justify-between items-center mb-5">
+            <h3 class="text-lg font-semibold">Current Projects</h3>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Create</button>
+          </div>
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b">
+                <th class="py-3">Project Name</th>
+                <th class="py-3">Customer</th>
+                <th class="py-3">Sent Date</th>
+                <th class="py-3">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="py-2">Travel App Design</td>
+                <td>Jacob Jones</td>
+                <td>28 Oct 2022</td>
+                <td>
+                  $240.90
+                </td>
+                <td> <button class="bg-green-200 text-green-700 px-5 py-1 rounded-lg">SENT</button></td>
+              </tr>
+              <!--  -->
+              <tr class="border-b">
+                <td class="py-2">Web App-Online Learning</td>
+                <td>Cameron Miliamion</td>
+                <td>18 Oct 2022</td>
+                <td>
+                  $240.90
+                </td>
+                <td> <button class="bg-yellow-200 text-red-700 px-5 py-1 rounded-lg">DRAFT</button></td>
+              </tr>
+              <!--  -->
+              <tr class="border-b">
+                <td class="py-2">UX Research for Event management app</td>
+                <td>JWade Women</td>
+                <td>15 Oct 2022</td>
+                <td>
+                  $560.90
+                </td>
+                <td> <button class="bg-blue-200 text-blue-700 px-5 py-1 rounded-lg">PAID</button></td>
+              </tr>
+                 <!--  -->
+              <tr class="border-b">
+                <td class="py-2">Employee management app</td>
+                <td>Rohit Sharma</td>
+                <td>14 Oct 2022</td>
+                <td>
+                  $530.90
+                </td>
+                <td> <button class="bg-blue-200 text-blue-700 px-5 py-1 rounded-lg">PAID</button></td>
+
+                 <!--  -->
+              <tr class="border-b">
+                <td class="py-2">E-Learning Website</td>
+                <td>Riya</td>
+                <td>12 Oct 2022</td>
+                <td>
+                  $5160.90
+                </td>
+                <td> <button class="bg-red-200 text-red-700 px-5 py-1 rounded-lg">REJECTED</button></td>
+                 <!--  -->
+              <tr class="border-b">
+                <td class="py-2">UX Research for Event management app</td>
+                <td>JWade Women</td>
+                <td>15 Oct 2022</td>
+                <td>
+                  $560.90
+                </td>
+                <td> <button class="bg-yellow-200 text-red-700 px-5 py-1 rounded-lg">DRAFT</button></td>
+                 <!--  -->
+              <tr class="border-b">
+                <td class="py-2">Railway web cosestudy</td>
+                <td>Narender Modi</td>
+                <td>6 Oct 2022</td>
+                <td>
+                  $260.90
+                </td>
+                <td> <button class="bg-blue-200 text-blue-700 px-5 py-1 rounded-lg">PAID</button></td>
+                 <!--  -->
+              <tr class="border-b">
+                <td class="py-2">Music app design</td>
+                <td>Manish Kumar</td>
+                <td>3 Oct 2022</td>
+                <td>
+                  $780.90
+                </td>
+                <td> <button class="bg-blue-200 text-blue-700 px-5 py-1 rounded-lg">PAID</button></td>
+                 <!--  -->
+              <tr class="border-b">
+                <td class="py-2">Responsive web design</td>
+                <td>Priya</td>
+                <td>1 Oct 2022</td>
+                <td>
+                  $760.90
+                </td>
+                <td> <button class="bg-yellow-200 text-red-700 px-5 py-1 rounded-lg">DRAFT</button></td>
+              </tr>
+
+             
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Events -->
+        <div class="bg-white shadow rounded-lg p-5" style="width: 30%;">
+          
+          <h3 class="text-lg font-semibold mb-5 mt-4">Events</h3>
+          <div class="flex flex-col space-y-4 overflow-y-scroll overflow-x-hidden max-h-48 p-4 bg-gray-100 rounded-lg">
+            <!-- First Item -->
+            <div class="flex items-center">
+              <div class="flex space-x-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJFx28Mr4QL5Y9YbDEQW94myfF75u-EV6vpA&s" class="w-12 h-12 rounded-full" alt="Event Logo">
+              </div>
+              <div class="flex gap-32">
+                <p class="pt-3 pl-3 font-bold">
+                  Wade Warren <br>
+                  <span class="text-blue-500">Birthday - Today</span>
+                </p>
+                <div class="bg-blue-500 mt-3 ml-10 p-2 h-10 text-white flex justify-between items-center rounded-lg">
+                  mahaveer
+                </div>
+              </div>
+            </div>
+          
+            <!-- Second Item -->
+            <div class="flex items-center">
+              <div class="flex space-x-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJFx28Mr4QL5Y9YbDEQW94myfF75u-EV6vpA&s" class="w-12 h-12 rounded-full" alt="Event Logo">
+              </div>
+              <div class="flex gap-32">
+                <p class="pt-3 pl-3 font-bold">
+                  Jacob Jones <br>
+                  <span class="text-green-500">Anniversary - Tomorrow</span>
+                </p>
+                <div class="bg-green-500 mt-3 ml-10 p-2 h-10 text-white flex justify-between items-center rounded-lg">
+                  celebration
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
